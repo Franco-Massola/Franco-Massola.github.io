@@ -28,6 +28,10 @@ a {
 
 .wrapper{
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    background-color: var(--clr-red)
+    grid-template-column: 1fr 4fr;
+    background-color: var(--clr-main);
+}
+
+aside {
+    padding: 2rem;
 }
