@@ -28,10 +28,40 @@ a {
 
 .wrapper{
     display: grid;
-    grid-template-column: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
     background-color: var(--clr-main);
 }
 
 aside {
     padding: 2rem;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.texto-footer{
+    color: var(--clr-main-light);
+    font-size: 0.85rem;
+}
+
+main{
+    background-color: var(--clr-white);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.titulo-principal{
+    color: var(--clr-main);
+
 }
