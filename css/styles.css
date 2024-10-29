@@ -20,15 +20,15 @@
 }
 
 aside {
-    padding: 2rem;
-    padding-right: 0;
+    padding: 2rem 0 2rem 2rem; /* Alinea el contenido dejando espacio igual a la izquierda */
     color: var(--clr-white);
     position: sticky;
     top: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Asegura que el contenido inicie desde el borde superior */
+    gap: 1rem; /* Espacio uniforme entre los elementos */
 }
 
 .logo {
@@ -130,7 +130,3 @@ main {
     border-radius: 1rem;
     overflow: hidden;
 }
-
-document.getElementById('productos-btn').addEventListener('click', () => {
-    window.location.href = 'catalogo.html';
-});
