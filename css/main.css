@@ -102,11 +102,6 @@ aside {
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
 
-.boton-menu > i.bi-hand-index-thumb-fill,
-.boton-menu > i.bi-hand-index-thumb {
-    transform: rotateZ(90deg);
-}
-
 .boton-carrito {
     margin-top: 2rem;
 }
@@ -186,3 +181,24 @@ main {
     color: var(--clr-white);
 }
 
+.volver-inicio {
+    margin-bottom: 1rem;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: var(--clr-red);
+    color: var(--clr-white);
+}
