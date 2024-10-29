@@ -1,0 +1,131 @@
+:root {
+    --clr-main: #1a1a1a;
+    --clr-main-light: #333333;
+    --clr-white: #d11a2a;
+    --clr-gray: #555555;
+    --clr-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--clr-main);
+}
+
+aside {
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--clr-white);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.boton-menu, .boton-carrito {
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: .85rem;
+    width: 100%;
+}
+
+.boton-menu.active, .boton-carrito.active {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.numerito {
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+    padding: .15rem .25rem;
+    border-radius: .25rem;
+}
+
+main {
+    background-color: var(--clr-main-light);
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.titulo-principal {
+    color: var(--clr-white);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    height: 250px;
+    margin-bottom: 2rem;
+    background-color: var(--clr-gray);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    height: 100%;
+    background-color: #555;
+}
+
+.carousel-slide.active {
+    background-color: var(--clr-main-light);
+}
+
+.carousel-buttons .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--clr-white);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-buttons .prev {
+    left: 10px;
+}
+
+.carousel-buttons .next {
+    right: 10px;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.producto {
+    background-color: var(--clr-gray);
+    border-radius: 1rem;
+    overflow: hidden;

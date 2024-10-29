@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geekstale - Tienda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside>
+            <div class="logo">Geekstale</div>
+            <nav class="menu">
+                <button class="boton-menu active">Inicio</button>
+                <button class="boton-menu">Productos</button>
+                <button class="boton-menu">Contacto</button>
+                <button class="boton-carrito">
+                    <i class="fas fa-shopping-cart"></i> Carrito <span class="numerito">0</span>
+                </button>
+            </nav>
+        </aside>
+        
+        <main>
+            <h1 class="titulo-principal">Bienvenidos a Geekstale</h1>
+            
+            <!-- Carrusel de imágenes -->
+            <div class="carousel">
+                <div class="carousel-slide active"></div>
+                <div class="carousel-slide"></div>
+                <div class="carousel-slide"></div>
+                <div class="carousel-buttons">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Productos -->
+            <section class="contenedor-productos">
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 1</h2>
+                        <p>$15000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 2</h2>
+                        <p>$15000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 3</h2>
+                        <p>$15000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
