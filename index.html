@@ -3,116 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Geekstale</title>
+    <title>Geekstale - Tienda</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        .error {
-            color: red;
-            font-size: 0.9em;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <h1>Formulario de Contacto</h1>
-        </header>
+        <aside>
+            <div class="logo">Geekstale</div>
+            <nav class="menu">
+                <button class="boton-menu active">Inicio</button>
+                <button class="boton-menu" onclick="location.href='catalogo.html'">Productos</button>
+                <button class="boton-menu" onclick="location.href='contacto.html'">Contactanos</button>
 
+
+            </nav>
+        </aside>
+        
         <main>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" maxlength="10" required>
-                    <span class="error" id="nameError"></span>
+            <h1 class="titulo-principal">Bienvenidos a Geekstale</h1>
+            
+            <!-- Carrusel de imágenes -->
+            <div class="carousel">
+                <div class="carousel-slide active"></div>
+                <div class="carousel-slide"></div>
+                <div class="carousel-slide"></div>
+                <div class="carousel-buttons">
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="lastname">Apellido:</label>
-                    <input type="text" id="lastname" name="lastname" maxlength="10" required>
-                    <span class="error" id="lastnameError"></span>
+            <!-- Productos -->
+            <section class="contenedor-productos">
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 1</h2>
+                        <p>$15000</p>
+                        
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                    <span class="error" id="emailError"></span>
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 2</h2>
+                        <p>$15000</p>
+                        
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="phone">Teléfono:</label>
-                    <input type="tel" id="phone" name="phone" maxlength="12" required pattern="[0-9]{10,12}">
-                    <span class="error" id="phoneError"></span>
+                <div class="producto">
+                    <div class="producto-imagen"></div>
+                    <div class="producto-detalles">
+                        <h2 class="producto-titulo">Producto 3</h2>
+                        <p>$15000</p>
+                        
+                    </div>
                 </div>
-
-                <button type="submit">Enviar</button>
-            </form>
-
-            <section id="submittedData" style="display: none;">
-                <h2>Datos enviados:</h2>
-                <p><strong>Nombre:</strong> <span id="displayName"></span></p>
-                <p><strong>Apellido:</strong> <span id="displayLastname"></span></p>
-                <p><strong>Correo Electrónico:</strong> <span id="displayEmail"></span></p>
-                <p><strong>Teléfono:</strong> <span id="displayPhone"></span></p>
             </section>
         </main>
     </div>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            // Limpiar mensajes de error previos
-            document.getElementById('nameError').textContent = '';
-            document.getElementById('lastnameError').textContent = '';
-            document.getElementById('emailError').textContent = '';
-            document.getElementById('phoneError').textContent = '';
-
-            // Obtener valores de los campos
-            const name = document.getElementById('name').value.trim();
-            const lastname = document.getElementById('lastname').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-
-            let valid = true;
-
-            // Validación de nombre (máximo 10 caracteres)
-            if (name === '' || name.length > 10) {
-                document.getElementById('nameError').textContent = 'El nombre es obligatorio y debe tener menos de 10 caracteres.';
-                valid = false;
-            }
-
-            // Validación de apellido (máximo 10 caracteres)
-            if (lastname === '' || lastname.length > 10) {
-                document.getElementById('lastnameError').textContent = 'El apellido es obligatorio y debe tener menos de 10 caracteres.';
-                valid = false;
-            }
-
-            // Validación de correo electrónico usando expresión regular
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById('emailError').textContent = 'Introduce un correo electrónico válido.';
-                valid = false;
-            }
-
-            // Validación de teléfono (entre 10 y 12 dígitos)
-            const phonePattern = /^[0-9]{10,12}$/;
-            if (!phonePattern.test(phone)) {
-                document.getElementById('phoneError').textContent = 'El teléfono debe contener entre 10 y 12 dígitos numéricos.';
-                valid = false;
-            }
-
-            // Si todos los campos son válidos, mostrar los datos enviados
-            if (valid) {
-                document.getElementById('submittedData').style.display = 'block';
-                document.getElementById('displayName').textContent = name;
-                document.getElementById('displayLastname').textContent = lastname;
-                document.getElementById('displayEmail').textContent = email;
-                document.getElementById('displayPhone').textContent = phone;
-
-                // Limpiar el formulario
-                document.getElementById('contactForm').reset();
-            }
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
