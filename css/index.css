@@ -42,7 +42,7 @@ aside {
     gap: .5rem;
 }
 
-.boton-menu, .boton-carrito {
+.boton-menu  {
     background-color: transparent;
     border: 0;
     color: var(--clr-white);
@@ -56,24 +56,45 @@ aside {
     width: 100%;
 }
 
-.boton-menu.active, .boton-carrito.active {
+.boton-menu.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
-    border-radius: 1rem 0 0 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
 }
 
-.numerito {
-    background-color: var(--clr-white);
-    color: var(--clr-main);
-    padding: .15rem .25rem;
-    border-radius: .25rem;
+.boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-white);
 }
+
+.boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-white);
+}
+
 
 main {
     background-color: var(--clr-main-light);
     margin: 1rem;
+    margin-left: 0;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .titulo-principal {

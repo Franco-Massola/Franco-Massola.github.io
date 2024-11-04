@@ -15,14 +15,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     let valid = true;
 
-    // Validación de nombre y apellido (máximo 10 caracteres)
-    if (name.length > 10) {
-        document.getElementById('nameError').textContent = 'El nombre no debe superar los 10 caracteres';
+    // Validación de nombre (solo letras, mínimo 3 y máximo 10 caracteres)
+    const namePattern = /^[A-Za-z]{3,10}$/;
+    if (!namePattern.test(name)) {
+        document.getElementById('nameError').textContent = 'El nombre debe contener entre 3 y 10 letras y solo letras';
         valid = false;
     }
 
-    if (lastname.length > 10) {
-        document.getElementById('lastnameError').textContent = 'El apellido no debe superar los 10 caracteres';
+    // Validación de apellido (solo letras, mínimo 3 y máximo 10 caracteres)
+    const lastnamePattern = /^[A-Za-z]{3,10}$/;
+    if (!lastnamePattern.test(lastname)) {
+        document.getElementById('lastnameError').textContent = 'El apellido debe contener entre 3 y 10 letras y solo letras';
         valid = false;
     }
 
