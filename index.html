@@ -24,11 +24,18 @@
         <main>
             <h1 class="titulo-principal">Bienvenidos a Geekstale</h1>
             
+            <!-- Carrusel de imágenes -->
             <div class="carousel">
                 <div class="carousel-img">
-                    <button class="button-prev buttons">&lt;</button>
-                    <img class="image" src="imagenes/fondo.jpg" alt="Imagenes de travesías en San Luis" id="imagen">
-                    <button class="button-next buttons">&gt;</button>
+                    
+                    <!-- Imágenes del carrusel -->
+                    <img class="carousel-slide" src="./img/logo.png" alt="logo">
+                    <img class="carousel-slide" src="./img/PLA-CICLO-1024x640.jpg" alt="Beneficios del PLA">                 
+                    <img class="carousel-slide" src="./img/psyduck.png" alt="psyduck">
+                    <img class="carousel-slide" src="./img/shinobu.png" alt="katana">
+   
+                    <button id="prev" class="nav-button" onclick="prevSlide()">&lt;</button>
+                    <button id="next" class="nav-button" onclick="nextSlide()">&gt;</button>
                 </div>
             </div>
             
@@ -49,7 +56,7 @@
         </main>
     </div>
 
-    <script src="scripts.js"></script>
-    <script src="script.js"></script> <!-- Enlace al script del carrusel -->
+    <script src="./js/index.js"></script>
+
 </body>
 </html>

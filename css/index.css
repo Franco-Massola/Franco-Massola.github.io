@@ -109,7 +109,9 @@ main {
 
 .carousel {
     position: relative;
-    height: 300px; /* Altura del carrusel */
+    height: 600px; /* Ajusta la altura del carrusel según tus necesidades */
+    width: 1000px;
+    margin: 0 auto;
     margin-bottom: 2rem;
     background-color: var(--clr-gray);
     border-radius: 1rem;
@@ -118,9 +120,10 @@ main {
 
 .carousel-slide {
     height: 100%; /* Asegúrate de que las imágenes llenen el carrusel */
+    display: flex; /* Cambiar a flex para centrar contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
     display: none; /* Oculta todas las imágenes por defecto */
-    justify-content: center;
-    align-items: center;
 }
 
 .carousel-slide.active {
@@ -128,10 +131,12 @@ main {
 }
 
 .carousel-slide img {
-    width: 100%; /* Ajusta la imagen al ancho del carrusel */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta la imagen para que cubra el espacio del carrusel */
+    width: auto; /* Cambiar a auto para mantener la proporción */
+    height: 400px; /* Establece la altura fija deseada */
+    object-fit: cover; /* Asegúrate de que las imágenes se ajusten sin distorsión */
+    margin: auto; /* Centra la imagen en el slide */
 }
+
 
 
 .nav-button {
@@ -140,10 +145,11 @@ main {
     transform: translateY(-50%);
     font-size: 2rem;
     color: var(--clr-white);
-    background: none;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mayor visibilidad */
     border: none;
     cursor: pointer;
     padding: 0 10px; /* Espaciado alrededor del botón */
+    border-radius: 50%; /* Bordes redondeados para los botones */
 }
 
 #prev {
@@ -166,4 +172,26 @@ main {
     margin-top: 1rem;
     list-style-type: disc;
     padding-left: 20px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--clr-white);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Espaciado alrededor del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición para el efecto hover */
+}
+
+#prev {
+    left: 10px; /* Botón izquierdo */
+}
+
+#next {
+    right: 10px; /* Botón derecho */
 }
