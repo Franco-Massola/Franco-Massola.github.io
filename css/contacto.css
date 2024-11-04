@@ -32,9 +32,11 @@ aside {
     gap: 1rem;
 }
 
-.logo {
-    font-weight: 400;
-    font-size: 1.3rem;
+
+.logo img {
+    width: 100%; /* Ajusta el tamaño para que ocupe todo el ancho disponible en .logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 150px; /* Opcional: Ajusta este valor para controlar el tamaño máximo */
 }
 
 .menu {

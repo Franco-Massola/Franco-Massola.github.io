@@ -1,11 +1,32 @@
-const openMenu = document.querySelector("#open-menu");
-const closeMenu = document.querySelector("#close-menu");
-const aside = document.querySelector("aside");
+const images = [
+    '../img/GEEKSTALE00.png', 
+    '../img/PLA-CICLO-1024x640.jpg',
+    '../img/deckboxs.jpeg'
+];
 
-openMenu.addEventListener("click", () => {
-    aside.classList.add("aside-visible");
-})
+let currentIndex = 0;
 
-closeMenu.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-})
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active'); // Elimina la clase activa de todas las imágenes
+        if (i === index) {
+            slide.classList.add('active'); // Añade la clase activa solo a la imagen actual
+        }
+    });
+}
+
+function nextSlide() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    currentIndex = (currentIndex + 1) % slides.length; // Circula al siguiente
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Circula al anterior
+    showSlide(currentIndex);
+}
+
+// Inicializar el carrusel
+showSlide(currentIndex);

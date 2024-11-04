@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
+
 :root {
     --clr-main: #1a1a1a; /* Negro principal */
     --clr-main-light: #333333; /* Negro más claro */
@@ -11,7 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Exo', sans-serif; /* Aplicación de la fuente Exo */
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
@@ -27,6 +29,7 @@ a {
     text-decoration: none;
 }
 
+/* Resto del CSS permanece igual */
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -34,21 +37,23 @@ a {
 }
 
 aside {
-    padding: 2rem 0 2rem 2rem; /* Alinea el contenido dejando espacio igual a la izquierda */
+    padding: 2rem 0 2rem 2rem;
     color: var(--clr-white);
     position: sticky;
     top: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Asegura que el contenido inicie desde el borde superior */
-    gap: 1rem; /* Espacio uniforme entre los elementos */
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
-.logo {
-    font-weight: 400;
-    font-size: 1.3rem;
+.logo img {
+    width: 100%; /* Ajusta el tamaño para que ocupe todo el ancho disponible en .logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 150px; /* Opcional: Ajusta este valor para controlar el tamaño máximo */
 }
+
 
 .menu {
     display: flex;
@@ -102,7 +107,6 @@ aside {
     box-shadow: 0 -1rem 0 var(--clr-white);
 }
 
-
 .texto-footer {
     color: var(--clr-main-light);
     font-size: 0.85rem;
@@ -123,11 +127,10 @@ main {
 
 .contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste automático */
-    gap: 1rem; /* Espacio entre los productos */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
     padding: 1rem;
 }
-
 
 .producto {
     display: flex;
@@ -137,14 +140,14 @@ main {
     background-color: #2c2c2c;
     border-radius: 10px;
     overflow: hidden;
-    margin: 5px; /* Reduce el margen alrededor de cada producto */
+    margin: 5px;
     padding: 8px;
 }
 
 .producto-imagen {
     width: 80%;
-    height: 250px; /* Ajusta esta altura para igualar las imágenes */
-    object-fit: cover; /* Asegura que la imagen se recorte proporcionalmente */
+    height: 250px;
+    object-fit: cover;
     border-bottom: 2px solid #444;
 }
 
@@ -164,11 +167,6 @@ main {
     color: #f74c4c;
     margin: 5px 0;
 }
-
-
-
-
-
 
 .volver-inicio {
     margin-bottom: 1rem;

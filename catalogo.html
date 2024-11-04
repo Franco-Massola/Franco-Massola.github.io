@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geekstale - Catálogo</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 <body>
     <div class="wrapper"> 
         <aside>
-            <div class="logo">Geekstale</div>
+            <div class="logo">
+                <img src="./img/GEEKSTALE00.png" alt="GEEKSTALE">
+            </div>
             <nav class="menu">
                 <button class="boton-menu" onclick="location.href='index.html'">Inicio</button>
                 <button class="boton-menu active" onclick="location.href='catalogo.html'">Productos</button>
@@ -19,9 +22,7 @@
         </aside>
         <main>
             <h2 class="titulo-principal">Todos los productos</h2>
-            <div class="contenedor-productos">
-                <!-- Productos se cargarán aquí dinámicamente -->
-            </div>
+            <div id="contenedor-productos" class="contenedor-productos">
         </main>
     </div>
     <script src="../js/catalogo.js"></script>

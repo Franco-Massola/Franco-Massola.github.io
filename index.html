@@ -6,52 +6,50 @@
     <title>Geekstale - Tienda</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a los estilos del carrusel -->
 </head>
 <body>
     <div class="wrapper">
         <aside>
-            <div class="logo">Geekstale</div>
+            <div class="logo">
+                <img src="./img/GEEKSTALE00.png" alt="GEEKSTALE">
+            </div>
             <nav class="menu">
                 <button class="boton-menu active">Inicio</button>
                 <button class="boton-menu" onclick="location.href='catalogo.html'">Productos</button>
                 <button class="boton-menu" onclick="location.href='contacto.html'">Contactanos</button>
-
-
             </nav>
         </aside>
         
         <main>
             <h1 class="titulo-principal">Bienvenidos a Geekstale</h1>
             
-            <!-- Carrusel de imágenes -->
             <div class="carousel">
-                <div class="carousel-slide active"></div>
-                <div class="carousel-slide"></div>
-                <div class="carousel-slide"></div>
-                <div class="carousel-buttons">
-                    <button class="carousel-btn prev">&#10094;</button>
-                    <button class="carousel-btn next">&#10095;</button>
+                <div class="carousel-img">
+                    <button class="button-prev buttons">&lt;</button>
+                    <img class="image" src="imagenes/fondo.jpg" alt="Imagenes de travesías en San Luis" id="imagen">
+                    <button class="button-next buttons">&gt;</button>
                 </div>
             </div>
-
-            <!-- Productos -->
-            <section class="contenedor-productos">
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-
-                </div>
+            
+            <!-- Sección informativa -->
+            <section class="info">
+                <h2>¿Qué es la impresión 3D?</h2>
+                <p>La impresión 3D es un proceso de fabricación aditiva que permite crear objetos tridimensionales a partir de un modelo digital. Utilizando diferentes técnicas y materiales, se pueden producir prototipos, piezas funcionales y modelos personalizados.</p>
+                
+                <h2>Beneficios de imprimir en PLA</h2>
+                <ul>
+                    <li>El PLA (ácido poliláctico) es un material de impresión 3D biodegradable y fácil de usar.</li>
+                    <li>Es más amigable con el medio ambiente en comparación con otros plásticos.</li>
+                    <li>Se adhiere bien a la cama de impresión, reduciendo la posibilidad de deformaciones.</li>
+                    <li>Viene en una variedad de colores y acabados, ofreciendo opciones estéticas.</li>
+                    <li>Es seguro para el uso en contacto con alimentos (en ciertas condiciones).</li>
+                </ul>
             </section>
         </main>
     </div>
 
     <script src="scripts.js"></script>
+    <script src="script.js"></script> <!-- Enlace al script del carrusel -->
 </body>
 </html>

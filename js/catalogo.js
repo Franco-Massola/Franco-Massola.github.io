@@ -17,7 +17,7 @@ const productos = [
         id: "Sakura-03",
         titulo: "Kero-chan",
         imagen: "../img/kero.jpeg",
-        categoria: { nombre: "Sakura Card Captor", id: "Kero" },
+        categoria: { nombre: "Sakura Card Captor", id: "Sakura" },
         precio: 8000  
     },
     {
@@ -27,7 +27,49 @@ const productos = [
         categoria: { nombre: "Demon Slayer", id: "DS" },
         precio: 15000
     },
-    // Agrega los productos restantes aquí
+    {
+        id: "Deckbox-01",
+        titulo: "Deckbox Tower",
+        imagen: "../img/deckboxTower.jpeg",
+        categoria: { nombre: "Deckbox", id: "DB" },
+        precio: 20000
+    },
+    {
+        id: "Deckbox-02",
+        titulo: "Deckbox Engranages",
+        imagen: "../img/deckboxEngranage.jpeg",
+        categoria: { nombre: "Deckbox", id: "DB" },
+        precio: 15000
+    },
+    {
+        id: "Switch-01",
+        titulo: "Joycon Switch",
+        imagen: "../img/joyconsSwitch.jpeg",
+        categoria: { nombre: "joycon", id: "NS" },
+        precio: 15000
+    },
+    {
+        id: "Dados-01",
+        titulo: "Porta Dados DnD",
+        imagen: "../img/dados.jpeg",
+        categoria: { nombre: "Dados", id: "DD" },
+        precio: 8000
+    },
+    {
+        id: "Perifericos-01",
+        titulo: "Stand Auriculares",
+        imagen: "../img/standAuris.jpeg",
+        categoria: { nombre: "Perifericos", id: "peris" },
+        precio: 12000
+    },
+    {
+        id: "Catan-01",
+        titulo: "Cajas Catan",
+        imagen: "../img/cajaCatan.jpeg",
+        categoria: { nombre: "Catan", id: "CT" },
+        precio: 6000
+    },
+  
 ];
 
 const contenedorProductos = document.querySelector(".contenedor-productos");
