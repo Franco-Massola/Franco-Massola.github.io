@@ -107,7 +107,7 @@ main {
     text-align: center;
 }
 
-.carousel {
+.carrusel {
     position: relative;
     height: 600px; /* Ajusta la altura del carrusel según tus necesidades */
     width: 1000px;
@@ -118,7 +118,7 @@ main {
     overflow: hidden; /* Asegúrate de que se oculten las imágenes no activas */
 }
 
-.carousel-slide {
+.carrusel-slide {
     height: 100%; /* Asegúrate de que las imágenes llenen el carrusel */
     display: flex; /* Cambiar a flex para centrar contenido */
     justify-content: center; /* Centrar horizontalmente */
@@ -126,18 +126,16 @@ main {
     display: none; /* Oculta todas las imágenes por defecto */
 }
 
-.carousel-slide.active {
+.carrusel-slide.active {
     display: flex; /* Muestra solo la imagen activa */
 }
 
-.carousel-slide img {
+.carrusel-slide img {
     width: auto; /* Cambiar a auto para mantener la proporción */
     height: 400px; /* Establece la altura fija deseada */
     object-fit: cover; /* Asegúrate de que las imágenes se ajusten sin distorsión */
     margin: auto; /* Centra la imagen en el slide */
 }
-
-
 
 .nav-button {
     position: absolute;
