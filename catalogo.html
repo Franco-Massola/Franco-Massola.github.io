@@ -8,51 +8,22 @@
     <link rel="stylesheet" href="../css/catalogo.css">
 </head>
 <body>
-    
     <div class="wrapper"> 
         <aside>
             <div class="logo">Geekstale</div>
             <nav class="menu">
-                <button href="index.html" class="boton-menu" onclick="location.href='index.html'">Inicio</button>
+                <button class="boton-menu" onclick="location.href='index.html'">Inicio</button>
                 <button class="boton-menu active" onclick="location.href='catalogo.html'">Productos</button>
                 <button class="boton-menu" onclick="location.href='contacto.html'">Contactanos</button>
-
-
             </nav>
         </aside>
         <main>
-
-
             <h2 class="titulo-principal">Todos los productos</h2>
-
-            <div id="contenedor-productos class="contenedor-productos">
-                <!-- Productos -->
-                <div class="producto">
-                    <img class="producto-imagen" src="../img/baculoDelSello.jpg" alt="">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Baston del Sello</h3>
-                        <p class="producto-precio">$15000</p>
-                        
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="../img/bastonEstrella.jpg" alt="">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">Baston Estrella</h3>
-                        <p class="producto-precio">$15000</p>
-                        
-                    </div>
-                </div>
-                <div class="producto">
-                    <img class="producto-imagen" src="../img/shinobuKatana.jpg" alt="">
-                    <div class="producto-detalles">
-                        <h3 class="producto-titulo">katana de Shinobu</h3>
-                        <p class="producto-precio">$15000</p>
-                        
-                    </div>
-                </div>
+            <div class="contenedor-productos">
+                <!-- Productos se cargarán aquí dinámicamente -->
             </div>
         </main>
     </div>
+    <script src="../js/catalogo.js"></script>
 </body>
 </html>

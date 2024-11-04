@@ -123,8 +123,8 @@ main {
 
 .contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.5rem; /* Reduce el espacio entre productos */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste automático */
+    gap: 1rem; /* Espacio entre los productos */
     padding: 1rem;
 }
 
