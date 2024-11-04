@@ -4,6 +4,7 @@
     --clr-white: #d11a2a;
     --clr-gray: #555555;
     --clr-text: #ffffff;
+    --clr-letras:#03e3fc ;
 }
 
 * {
@@ -159,7 +160,7 @@ main {
 }
 
 .info {
-    color: var(--clr-white);
+    color: var(--clr-letras);
 }
 
 .info h2 {
