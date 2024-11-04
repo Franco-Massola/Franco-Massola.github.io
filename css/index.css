@@ -160,7 +160,7 @@ main {
 }
 
 .info {
-    color: var(--clr-letras);
+    color: var(--clr-white);
 }
 
 .info h2 {
@@ -193,4 +193,8 @@ main {
 
 #next {
     right: 10px; 
+}
+
+.parrafo{
+    color: var(--clr-letras);
 }
