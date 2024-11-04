@@ -9,24 +9,24 @@ let currentIndex = 0;
 function showSlide(index) {
     const slides = document.querySelectorAll('.carrusel-slide');
     slides.forEach((slide, i) => {
-        slide.classList.remove('active'); // Elimina la clase activa de todas las imágenes
+        slide.classList.remove('active'); 
         if (i === index) {
-            slide.classList.add('active'); // Añade la clase activa solo a la imagen actual
+            slide.classList.add('active'); 
         }
     });
 }
 
 function nextSlide() {
     const slides = document.querySelectorAll('.carrusel-slide');
-    currentIndex = (currentIndex + 1) % slides.length; // Circula al siguiente
+    currentIndex = (currentIndex + 1) % slides.length; 
     showSlide(currentIndex);
 }
 
 function prevSlide() {
     const slides = document.querySelectorAll('.carrusel-slide');
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Circula al anterior
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length; 
     showSlide(currentIndex);
 }
 
-// Inicializar el carrusel
+
 showSlide(currentIndex);

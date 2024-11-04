@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap');
 
 :root {
-    --clr-main: #1a1a1a; /* Negro principal */
-    --clr-main-light: #333333; /* Negro más claro */
-    --clr-white: #d11a2a; /* Rojo intenso */
-    --clr-gray: #555555; /* Gris oscuro */
+    --clr-main: #1a1a1a; 
+    --clr-main-light: #333333; 
+    --clr-white: #d11a2a; 
+    --clr-gray: #555555; 
     --clr-red: #961818;
-    --clr-text: #ffffff; /* Blanco para mejorar la legibilidad del texto */
+    --clr-text: #ffffff; 
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Exo', sans-serif; /* Aplicación de la fuente Exo */
+    font-family: 'Exo', sans-serif; 
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
@@ -29,7 +29,7 @@ a {
     text-decoration: none;
 }
 
-/* Resto del CSS permanece igual */
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -49,9 +49,9 @@ aside {
 }
 
 .logo img {
-    width: 100%; /* Ajusta el tamaño para que ocupe todo el ancho disponible en .logo */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-width: 150px; /* Opcional: Ajusta este valor para controlar el tamaño máximo */
+    width: 100%; 
+    height: auto; 
+    max-width: 150px; 
 }
 
 
